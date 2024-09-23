@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+  display: flex;
+ background-color: rgb(6, 0, 0);
+}
+
+
+.img{
+    width: 680px;
+    height: 770px;
+    object-fit: contain;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.buttonOn{
+  width: 120px;
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: rgb(242, 93, 7);
+  color: #fff;
+}
+.buttonOff{
+    width: 120px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(19, 19, 19);
+    color: #fff;
+}
+.btnflicker{
+    width: 120px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(99, 78, 66);
+    color: #fff;
+}
+.buttonFlicker{
+    width: 120px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(99, 78, 66);
+    color: #fff;
+    animation: flick 7s linear infinite;
+  }
+
+  @keyframes flick{
+    0%
+    {
+         background-color: rgb(99, 78, 66);
+         filter: brightness(1.5);
+    }
+
+    15%
+    {
+        background-color: black;
+    }
+    25%
+    {
+        background-color: rgb(99, 78, 66);
+        filter: brightness(0.5);
+    }
+    35%
+    {
+        background-color: black;
+    }
+   45%
+    {
+        background-color: rgb(99, 78, 66);
+        filter: brightness(1.5);
+    }
+    55%
+    {
+       background-color: black;
+    }
+    65%
+    {
+        background-color: rgb(99, 78, 66);
+        filter: brightness(0.5);
+    }
+    75%{
+        background-color: black;
+    }
+    90%
+    {
+        background-color: rgb(99, 78, 66);
+        filter: brightness(1.5);
+    }
+    100%
+    {
+        background-color: black;
+    }
+  }
+
+  .buttonOn,
+  .buttonOff,
+  .buttonFlicker:hover{
+     cursor: pointer;
+  }
+
+.bulbOn{
+    width: 680px;
+    height: 720px;
+    object-fit: contain;
+    filter: brightness(1);
+
+}
+
+.bulbOff{
+    width: 680px;
+    height: 720px;
+    object-fit: contain;
+    filter: brightness(0.1);
+}
+
+.flicker{
+    width: 680px;
+    height: 720px;
+   object-fit: contain;
+   animation: bulb 4s linear infinite;
+}
+
+@keyframes bulb {
+    0%{
+        filter: brightness(0.1);
+    }
+    15%{
+        filter: brightness(1);
+    }
+    25%{
+        filter: brightness(0.1);
+    }
+    35%{
+        filter: brightness(1);
+    }
+    45%{
+        filter: brightness(0.1);
+    }
+    55%{
+        filter: brightness(1);
+    }
+    65%{
+        filter: brightness(0.1);
+    }
+    75%{
+        filter: brightness(1);
+    }
+    90%{
+        filter: brightness(0.1);
+    }
+    100%{
+        filter: brightness(1);
+    }
+    
+}
